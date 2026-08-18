@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <head>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      />
+    </head>
+    <script src="script.js" defer></script>
+    <title>DYNAMIC TODO LIST</title>
+  </head>
+  <body>
+    <div class="bigbox">
+      <div class="container">
+        <h1>SIMPLE KANBAN BOARD</h1>
+        <div class="board">
+          <!-- list-1 -->
+          <div class="list" id="list1">
+            <h2>TO DO</h2>
+            <button class="addtask">
+              <i class="fa fa-plus-square icon" aria-hidden="false"></i>
+            </button>
+            <form class="input">
+              <input type="text" id="this-input" class="this-input" />
+              <button type="submit" id="submit-button">add</button>
+            </form>
+            <div class="card" id="card1" draggable="true">WASH DISHES</div>
+            <div class="card" id="card2" draggable="true">DO APPTITUDE</div>
+          </div>
+          <!-- list-2 -->
+          <div class="list" id="list2">
+            <h2>IN PROGRESS</h2>
+            <div class="card" id="card3" draggable="true">LEARN TO CODE</div>
+            <div class="card" id="card4" draggable="true">READ A BOOK</div>
+          </div>
+          <!-- list-3 -->
+          <div class="list" id="list3">
+            <h2>COMPLETED</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mode">
+      <button class="dark-mode" id="dark-mode">DARK-MODE</button>
+    </div>
+  </body>
+</html>
