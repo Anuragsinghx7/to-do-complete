@@ -1,51 +1,97 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dynamic Todo List</title>
+
     <link rel="stylesheet" href="style.css" />
-    <head>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      />
-    </head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
     <script src="script.js" defer></script>
-    <title>DYNAMIC TODO LIST</title>
   </head>
+
   <body>
-    <div class="bigbox">
-      <div class="container">
-        <h1>SIMPLE KANBAN BOARD</h1>
+    <main class="bigbox">
+      <section class="container">
+        <header class="header">
+          <div>
+            <p class="eyebrow">PRODUCTIVITY BOARD</p>
+            <h1>Simple Kanban Board</h1>
+            <p class="subtitle">
+              Organize your tasks and keep your workflow moving.
+            </p>
+          </div>
+        </header>
+
         <div class="board">
-          <!-- list-1 -->
-          <div class="list" id="list1">
-            <h2>TO DO</h2>
-            <button class="addtask">
-              <i class="fa fa-plus-square icon" aria-hidden="false"></i>
+          <!-- TO DO -->
+          <section class="list" id="list1">
+            <div class="list-header">
+              <div class="list-title">
+                <span class="status-dot todo-dot"></span>
+                <h2>TO DO</h2>
+              </div>
+
+              <span class="list-number">01</span>
+            </div>
+
+            <button class="addtask" type="button">
+              <i class="fa-solid fa-plus icon" aria-hidden="true"></i>
+              <span>Add new task</span>
             </button>
+
             <form class="input">
-              <input type="text" id="this-input" class="this-input" />
-              <button type="submit" id="submit-button">add</button>
+              <input
+                type="text"
+                id="this-input"
+                class="this-input"
+                placeholder="What needs to be done?"
+                autocomplete="off"
+              />
+
+              <button type="submit" id="submit-button">Add</button>
             </form>
-            <div class="card" id="card1" draggable="true">WASH DISHES</div>
-            <div class="card" id="card2" draggable="true">DO APPTITUDE</div>
-          </div>
-          <!-- list-2 -->
-          <div class="list" id="list2">
-            <h2>IN PROGRESS</h2>
-            <div class="card" id="card3" draggable="true">LEARN TO CODE</div>
-            <div class="card" id="card4" draggable="true">READ A BOOK</div>
-          </div>
-          <!-- list-3 -->
-          <div class="list" id="list3">
-            <h2>COMPLETED</h2>
-          </div>
+          </section>
+
+          <!-- IN PROGRESS -->
+          <section class="list" id="list2">
+            <div class="list-header">
+              <div class="list-title">
+                <span class="status-dot progress-dot"></span>
+                <h2>IN PROGRESS</h2>
+              </div>
+
+              <span class="list-number">02</span>
+            </div>
+          </section>
+
+          <!-- COMPLETED -->
+          <section class="list" id="list3">
+            <div class="list-header">
+              <div class="list-title">
+                <span class="status-dot completed-dot"></span>
+                <h2>COMPLETED</h2>
+              </div>
+
+              <span class="list-number">03</span>
+            </div>
+          </section>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
+
     <div class="mode">
-      <button class="dark-mode" id="dark-mode">DARK-MODE</button>
+      <button class="dark-mode" id="dark-mode" type="button">
+        <i class="fa-solid fa-moon"></i>
+        <span>DARK-MODE</span>
+      </button>
     </div>
   </body>
 </html>

@@ -22,11 +22,13 @@ inputclass.addEventListener("submit", submitTask);
 function submitTask(event) {
   event.preventDefault();
   const input = thisinput.value.trim();
-  sessionStorage.setItem("alltasks", JSON.stringify(input));
-  addCard(input);
-  iconclass.style.display = "block";
-  inputclass.style.display = "none";
-  inputclass.reset();
+  if (input !== "") {
+    sessionStorage.setItem("alltasks", JSON.stringify(input));
+    addCard(input);
+    iconclass.style.display = "block";
+    inputclass.style.display = "none";
+    inputclass.reset();
+  }
 }
 function addCard(input) {
   const newCard = document.createElement("div");
